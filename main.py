@@ -39,4 +39,8 @@ async def webhook(request: WebhookRequest):
     else:
         return {
             "text": "Lệnh không hợp lệ. Hãy thử các lệnh sau:\n/quote - Câu nói hay\n/joke - Câu đùa vui\n/funfact - Sự thật thú vị\n/challenge - Thử thách\n/lucky - Lời tiên tri may mắn"
-        } 
+        }
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host="0.0.0.0", port=8080)
